@@ -68,7 +68,7 @@ const fred = new Instructor({
     age: 37,
     favLanguage: 'JavaScript',
     specialty: 'Front-end',
-    catchPhrase: `Don't forget the homies`
+    catchPhrase: `"Yabba Dabba Doo"`
 });
 
 const wilma = new Instructor({
@@ -77,7 +77,7 @@ const wilma = new Instructor({
     age: 32,
     favLanguage: 'Python',
     specialty: 'Back-end',
-    catchPhrase: `And you know this....... MAN!`
+    catchPhrase: `"And you know this....... MAN!"`
 });
 
 const barney = new Instructor({
@@ -86,12 +86,39 @@ const barney = new Instructor({
     age: 33,
     favLanguage: 'JavaScript',
     specialty: 'Full - Stack',
-    catchPhrase: `What you talking bout, Willis?`
+    catchPhrase: `"What you talking bout, Willis?"`
 });
 
-console.log(fred);
+// Instructor 1 test
 console.log(fred.speak());
+console.log(
+    `${fred.name}'s Bio
+    ${fred.name} is ${fred.age} years old.
+    ${fred.name}'s favorite language is ${fred.favLanguage}.
+    He speacializes in ${fred.specialty} development.
+    His catch phrase is from his favorite cartoon the Flintstones, ${fred.catchPhrase}. `
+);
+// Instructor 2 test
+console.log(wilma.speak());
+console.log(
+    `${wilma.name}'s Bio
+    ${wilma.name} is ${wilma.age} years old.
+    ${wilma.name}'s favorite language is ${wilma.favLanguage}.
+    She speacializes in ${wilma.specialty} development.
+    Her catch phrase is from her favorite movie Friday, ${wilma.catchPhrase}. `
+);
+// Instructor 3 test
 console.log(barney.speak());
+console.log(
+    `${barney.name}'s Bio
+    ${barney.name} is ${barney.age} years old.
+    ${barney.name}'s favorite language is ${barney.favLanguage}.
+    He speacializes in ${barney.specialty} development.
+    His catch phrase is from his favorite sitcom Different Strokes, ${barney.catchPhrase}. `
+);
+
+
+
 
 //   Team Leads
 const chrisPaul = new TeamLead({
@@ -101,7 +128,7 @@ const chrisPaul = new TeamLead({
     gradclassName: "Web2005",
     favInstructor: "Doc Rivers",
     specialty: "Front-end",
-    catchPhrase: "Show me the money!!!!",
+    catchPhrase: '"Show me the money!!!!"',
     favLanguage: "JavaScript"
 });
 
@@ -112,7 +139,7 @@ const jasonKidd = new TeamLead({
     gradclassName: "Web1994",
     favInstructor: "Rick Carlisle",
     specialty: "Flex-box",
-    catchPhrase: "I must break you",
+    catchPhrase: '"I must break you"',
     favLanguage: "LESS"
 });
 
@@ -124,45 +151,96 @@ const steveNash = new TeamLead({
     gradclassName: "Web2005",
     favInstructor: "Mike D'Antoni",
     specialty: "Databases",
-    catchPhrase: "Did I do that?",
+    catchPhrase: '"Did I do that?"',
     favLanguage: "PHP"
 });
 
+// Team Lead 1 test
 console.log(jasonKidd.speak());
-console.log(jasonKidd);
+console.log(`${jasonKidd.name}'s Bio
+Jason is ${jasonKidd.age} years old.
+his favorite instructor is ${jasonKidd.favInstructor}
+He specializes in ${jasonKidd.specialty}
+His favorite language is ${jasonKidd.favLanguage}.
+His catch phrase is from the movie Rocky IV, ${jasonKidd.catchPhrase}
+${jasonKidd.name}'s grad class is ${jasonKidd.gradclassName}`);
+
+// Team Lead 2 test
 console.log(chrisPaul.speak());
-console.log(chrisPaul);
+console.log(`${chrisPaul.name}'s Bio
+Chris is ${chrisPaul.age} years old.
+his favorite instructor is ${chrisPaul.favInstructor}.
+He specializes in ${chrisPaul.specialty}.
+His favorite language is ${chrisPaul.favLanguage}.
+His catch phrase is from the movie Jerry Maguire, ${chrisPaul.catchPhrase}.
+${chrisPaul.name}'s grad class is ${chrisPaul.gradclassName}`);
+
+// Team Lead 3 test
 console.log(steveNash.speak());
-console.log(steveNash);
+console.log(`${steveNash.name}'s Bio
+Steve is ${steveNash.age} years old.
+his favorite instructor is ${steveNash.favInstructor}
+He specializes in ${steveNash.specialty}
+His favorite language is ${steveNash.favLanguage}.
+His catch phrase is from the sitcom Family Matters, ${steveNash.catchPhrase}
+${steveNash.name}'s grad class is ${steveNash.gradclassName}`);
 
 // Students
-const dwayneWayne = new Student ({
+const dwayneWayne = new Student({
     name: "Dwayne Wayne",
     age: 54,
     location: "Brooklyn, NY",
     previousBackground: "80's sitcom star",
     className: "WEB1",
-    favSubjects: ["HTML", "CSS", "JavaScript"]
+    favSubjects: [`HTML, CSS, and JavaScript`]
 
 });
 
-const ronJohnson = new Student ({
+const ronJohnson = new Student({
     name: "Ron Johnson",
     age: 56,
     location: "Detroit, Mi",
     previousBackground: "80'sitcom star",
     className: "WEB2",
-    favSubjects: ["CSS", "Python"],
+    favSubjects: [`CSS", and Python`],
 
 });
 
-const whitleyGilbert = new Student ({
+const whitleyGilbert = new Student({
     name: "Whitley Gilbert",
     age: 57,
     location: "Richtown, USA",
     previousBackground: "80's sitcom star",
     className: "WEB1",
-    favSubjects:["Python", "CS", "Java"],
+    favSubjects: [`Python, CSS, and Java`],
 });
 
-whitleyGilbert.listSubjects();
+// Student 1 test
+console.log(dwayneWayne.speak());
+console.log(
+    `${dwayneWayne.name}'s Bio
+${dwayneWayne.name} is ${dwayneWayne.age} years old.
+${dwayneWayne.name} has a background as a ${dwayneWayne.previousBackground}.
+He is currently enrolled in ${dwayneWayne.className}.
+${dwayneWayne.name}'s favorite subjects so far are ${dwayneWayne.favSubjects}.`
+);
+
+// Student 2 test
+console.log(ronJohnson.speak());
+console.log(
+    `${ronJohnson.name}'s Bio
+${ronJohnson.name} is ${ronJohnson.age} years old.
+${ronJohnson.name} has a background as a ${ronJohnson.previousBackground}.
+He is currently enrolled in ${ronJohnson.className}.
+${ronJohnson.name}'s favorite subjects so far are ${ronJohnson.favSubjects}.`
+);
+
+// Student 3 test
+console.log(whitleyGilbert.speak());
+console.log(
+    `${whitleyGilbert.name}'s Bio
+${whitleyGilbert.name} is ${whitleyGilbert.age} years old.
+${whitleyGilbert.name} has a background as a ${whitleyGilbert.previousBackground}.
+He is currently enrolled in ${ronJohnson.className}.
+${whitleyGilbert.name}'s favorite subjects so far are ${whitleyGilbert.favSubjects}.`
+);
